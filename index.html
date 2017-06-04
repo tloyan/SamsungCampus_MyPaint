@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPaint</title>
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css">
+</head>
+<body>
+    <div>
+        <input type="submit" name="symetry" value="mirrorX"></input>
+        <input type="submit" name="symetry" value="mirrorY"></input>
+
+        <input type="submit" name="tools" value="pencil"></input>
+        <input type="submit" name="tools" value="line"></input>
+        <input type="submit" name="tools" value="square"></input>
+        <input type="submit" name="tools" value="circle"></input>
+        <input type="submit" name="tools" value="eraser"></input>
+
+        <input type="submit" name="border" value="bordure"></input>
+        <input type="submit" name="border" value="plain"></input>
+
+        <input type="number" name="borderSize">bordureSize</input>
+        <input type="color" name="borderColor">bordureColor</input>
+        <input type="color" name="plainColor">bordureColor</input>
+
+        <input type="submit" name="preload" value="preload"></input>
+        <a id="download">Download as image</a>
+        <input type="file" name="edit">
+    </div>
+    <div style="position: relative; top: 50px;">
+        <canvas id="canvas_tmp" style="border: 1px solid; width: 800px; height: 600px; position: absolute; left: 0px; top: 0px;"></canvas>
+        <canvas id="canvas" style="border: 1px solid; width: 800px; height: 600px; position: absolute; left: 0px; top: 0px;">
+        Sorry, your browser does not support the canvas tag.
+    </canvas>
+    </div>
+
+    <div>
+        <input type="submit" name="addLayer" value="+"></input>
+        <input type="submit" name="displayLayer" value="display" class="layer_id_0"></input>
+        <input type="submit" name="deleteLayer" value="x" class="layer_id_0"></input>
+        <input type="submit" name="upLayer" value="^" class="layer_id_0"></input>
+        <input type="submit" name="downLayer" value="v" class="layer_id_0"></input>
+    </div>
+
+    <div id="Layers" style="position:relative; top: 650px;"></div>
+
+    <script type="text/javascript" src="/layersFunction.js"></script>
+    <script type="text/javascript" src="/interfaceEvent.js"></script>
+    <script type="text/javascript" src="/function.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+</body>
+</html>
